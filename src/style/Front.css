@@ -1,0 +1,166 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.mainPage {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: aqua;
+  display: flex;
+}
+.mainPage .left {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  padding: 20px 30px;
+  width: 800px;
+  background-image: url("../img/beautiful-countryside-road-greenery-forests.jpg");
+  background-position: center;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  height: 100vh; /* 
+  background-color: rgb(237, 4, 4); */
+  padding: 20px;
+}
+
+.leftNav {
+  margin-top: 30px;
+  /*   background-color: rgba(2, 2, 2, 0.522); */
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  align-items: center;
+  border-radius: 5px;
+  width: 90%;
+}
+.logo {
+  font-size: 30px;
+  font-family: cursive;
+  font-weight: bold;
+  color: rgb(5, 5, 5);
+  /*  background-color: rgba(2, 2, 2, 0.522); */
+}
+.currLoc {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(2, 2, 2, 0.522);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.imgCenter {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px auto;
+  margin-top: 120px;
+  background-color: rgba(0, 0, 0, 0.37);
+  height: 270px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-top-right-radius: 90px;
+  border-bottom-right-radius: 90px;
+}
+.heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode",
+    Geneva, Verdana, sans-serif;
+}
+.inputdiv {
+  /*  background-color: springgreen; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.inputdiv input {
+  width: 360px;
+  border: none;
+  background-color: rgba(164, 164, 164, 0.469);
+  outline: none;
+  padding: 10px 14px;
+  font-size: 20px;
+  color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+::placeholder {
+  font-family: cursive;
+  color: rgb(235, 234, 234);
+}
+.inputdiv i {
+  font-size: 22px;
+  padding: 10.7px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgba(164, 164, 164, 0.469);
+  transition: all ease 0.35s;
+  cursor: pointer;
+}
+.inputdiv i:hover {
+  background-color: rgba(240, 248, 255, 0.469);
+}
+
+/* Right */
+.mainPage .right {
+  width: 610px;
+  background-color: rgb(249, 249, 250);
+}
+
+.rightNav {
+  background-color: rgb(15, 14, 15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightNav a {
+  font-family: cursive;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0px 10px;
+}
+.weatherDiv {
+  /*  background-color: aquamarine; */
+  padding: 30px;
+  margin-top: 6px;
+}
+.middleW {
+  /* background-color: violet; */
+  font-family: "Geneva, Verdana, sans-serif";
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.bottomBoxOuter {
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bottomBoxOuter div {
+  width: 200px;
+  height: 180px;
+  margin: 10px;
+  background-color: brown;
+}
+.bottomBoxOuter div img {
+  object-fit: contain;
+  width: 100%;
+  height: 100px;
+}
