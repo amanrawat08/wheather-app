@@ -3,11 +3,11 @@ import clear from "../img/clear.png";
 import cloudy from "../img/cloudy.png";
 import mist from "../img/mist.webp";
 import rain from "../img/mist.webp";
-import wind from "../img/rain.webp";
+import wind from "../img/wind.jpg";
+import weather from "../img/weather.png";
 
 import "../style/Front.css";
 import timestamp from "time-stamp";
-import { splitVendorChunkPlugin } from "vite";
 export function Weather(props) {
   const date = timestamp("DD /MM/YYYY");
   const time = timestamp("HH :mm:ss");
@@ -144,14 +144,172 @@ export function Weather(props) {
       <div className="bottomBoxOuter">
         <div>
           <img src={wind} alt="" />
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            Wind Speed{" "}
+          </span>
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            {speed}{" "}
+          </span>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>
+          <img src={cloudy} alt="" />
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            Cloudy
+          </span>
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            {cloud}%{" "}
+          </span>
+        </div>
+        <div>
+          <img src={weather} alt="" />
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            Weather Type{" "}
+          </span>
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            {weather}{" "}
+          </span>
+        </div>
+        <div>
+          <img src={wind} alt="" />
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            Wind Speed{" "}
+          </span>
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            {speed}{" "}
+          </span>
+        </div>
+        <div>
+          <img src={wind} alt="" />
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            Wind Speed{" "}
+          </span>
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            {speed}{" "}
+          </span>
+        </div>
+        <div>
+          <img src={wind} alt="" />
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            Wind Speed{" "}
+          </span>
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            {speed}{" "}
+          </span>
+        </div>
+        <div>
+          <img src={wind} alt="" />
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            Wind Speed{" "}
+          </span>
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            {speed}{" "}
+          </span>
+        </div>
+        <div>
+          <img src={wind} alt="" />
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            Wind Speed{" "}
+          </span>
+          <span
+            style={{
+              fontSize: "20px",
+              fontFamily: "cursive",
+              fontWeight: "bold",
+            }}
+          >
+            {speed}{" "}
+          </span>
+        </div>
       </div>
     </>
   );
