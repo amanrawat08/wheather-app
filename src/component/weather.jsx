@@ -14,7 +14,7 @@ import timestamp from "time-stamp";
 export function Weather(props) {
   const date = timestamp("DD /MM/YYYY");
   const time = timestamp("HH :mm:ss");
-  /*  const [state, setState] = useState(props.state); */
+  const [state, setState] = useState(props.state);
   const [cloud, setCloud] = useState("");
   const [temp, setTemp] = useState("");
   const [pressure, setPressure] = useState("");
@@ -28,7 +28,7 @@ export function Weather(props) {
   async function wheatherCall() {
     /* state ? setState("delhi") : setState(props.state); */
     /*  setState(props.state); */
-    console.log(props.mystate);
+    /*   console.log(props.mystate); */
 
     try {
       const response = await fetch(
@@ -41,13 +41,13 @@ export function Weather(props) {
       setPressure(data.main.pressure);
       setHumidity(data.main.humidity);
       setCountrycode(data.sys.country);
+      setState(data.name);
       setSpeed(data.wind.speed);
       setWeather(data.weather[0].main);
       setVisibility(data.visibility);
       setLit(data.coord.lat.toFixed(0) + "/" + data.coord.lon.toFixed(0));
     } catch (error) {
       console.log(error);
-      return;
     }
   }
   wheatherCall();
@@ -121,26 +121,30 @@ export function Weather(props) {
             </div>
             <div
               style={{
-                backgroundColor: "white",
-                padding: "10px",
+                backgroundColor: " rgba(0, 0, 0, 0.392)",
+                borderRadius: "7px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 listStyleType: "none",
                 fontSize: "20px",
+                color: "white",
               }}
             >
               <ul
                 style={{
                   listStyleType: "none",
-                  paddingRight: "10px",
-                  width: "160px",
+
+                  width: "190px",
                   fontFamily: "Geneva, Verdana, sans-serif",
                 }}
               >
-                <li style={{ padding: "3px" }}>State:{props.mystate}</li>
+                <li style={{ padding: "3px" }}>State:{state}</li>
                 <li style={{ padding: "3px" }}>Country:{countrycode}</li>
                 <li style={{ padding: "3px" }}>
                   Temp: {(temp - 273).toFixed(0)}&#xb0;C
                 </li>
-                <li style={{ padding: "3px" }}>PA:{pressure}</li>
+                <li style={{ padding: "3px" }}>PA:{pressure}&nbsp;hPA</li>
                 <li style={{ padding: "3px" }}>Humidity:{humidity}% </li>
               </ul>
             </div>

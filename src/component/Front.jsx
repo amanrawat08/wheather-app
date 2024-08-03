@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../style/Front.css";
 import { Weather } from "./weather";
 export function FrontPage() {
+  const inputRef = useRef();
   const [inputValue, setInputValue] = useState("");
   const [isSubmit, setIsSubmit] = useState("delhi");
 
   const clickHandler = () => {
     setIsSubmit(inputValue);
+    inputValue === "" ? setIsSubmit("delhi") : isSubmit;
+    inputRef.current.value = "";
     setInputValue("");
   };
 
@@ -27,6 +30,7 @@ export function FrontPage() {
           <div className="inputdiv">
             <input
               type="text"
+              ref={inputRef}
               placeholder="Enter location"
               onChange={(e) => setInputValue(e.target.value)}
             />
@@ -39,15 +43,7 @@ export function FrontPage() {
           </div>
         </div>
       </div>
-      <div className="right">
-        {/*  <nav className="rightNav">
-          <a href="">Weather</a>
-          <a href="">Alerts</a>
-          <a href="">News</a>
-          <a href="">About</a>
-        </nav> */}
-        {isSubmit && <Weather mystate={isSubmit} />}
-      </div>
+      <div className="right">{isSubmit && <Weather mystate={isSubmit} />}</div>
     </div>
   );
 }

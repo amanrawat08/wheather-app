@@ -5,7 +5,6 @@ body {
 .mainPage {
   width: 100%;
   min-height: 100vh;
-
   /* background-color: aqua; */
   display: flex;
 }
@@ -17,15 +16,14 @@ body {
   width: 800px;
   background-image: url("../img/beautiful-countryside-road-greenery-forests.jpg");
   background-position: center;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: start;
-  height: 100vh; /* 
+  height: 98vh; /* 
   background-color: rgb(237, 4, 4); */
   padding: 20px;
 }
@@ -62,14 +60,12 @@ body {
   margin: 10px auto;
   margin-top: 120px;
   background-color: rgba(0, 0, 0, 0.37);
-  height: 270px;
+  height: 250px;
   width: 80%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  border-top-right-radius: 90px;
-  border-bottom-right-radius: 90px;
 }
 .heading {
   font-size: 32px;
@@ -116,7 +112,12 @@ body {
 /* Right */
 .mainPage .right {
   width: 610px;
-  background-color: rgb(249, 249, 250);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 65%,
+    rgba(238, 174, 202, 1) 68%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
 
 .rightNav {
@@ -149,11 +150,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .bottomBoxOuter div {
-  width: 200px;
+  width: 160px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -161,6 +162,8 @@ body {
   height: 180px;
   margin: 10px;
   /*  background-color: brown; */
+  background-color: rgba(120, 120, 120, 0.465);
+  color: rgb(32, 9, 159);
 }
 .bottomBoxOuter div img {
   object-fit: contain;
