@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import clear from "../img/clear.png";
 import cloudy from "../img/cloudy.png";
 import mist from "../img/mist.webp";
-import rain from "../img/mist.webp";
+import rain from "../img/rain.webp";
+import tempImg from "../img/temp.png";
+import litLng from "../img/litlat.gif";
+import visibility1 from "../img/visibility.webp";
 import wind from "../img/wind.jpg";
-import weather from "../img/weather.png";
+import weather1 from "../img/weather.png";
 
 import "../style/Front.css";
 import timestamp from "time-stamp";
@@ -19,6 +22,8 @@ export function Weather(props) {
   const [countrycode, setCountrycode] = useState("");
   const [speed, setSpeed] = useState("");
   const [weather, setWeather] = useState("");
+  const [visibility, setVisibility] = useState("");
+  const [lit, setLit] = useState("");
 
   async function wheatherCall() {
     /* state ? setState("delhi") : setState(props.state); */
@@ -38,6 +43,8 @@ export function Weather(props) {
       setCountrycode(data.sys.country);
       setSpeed(data.wind.speed);
       setWeather(data.weather[0].main);
+      setVisibility(data.visibility);
+      setLit(data.coord.lat.toFixed(0) + "/" + data.coord.lon.toFixed(0));
     } catch (error) {
       console.log(error);
       return;
@@ -185,7 +192,7 @@ export function Weather(props) {
           </span>
         </div>
         <div>
-          <img src={weather} alt="" />
+          <img src={weather1} alt="" />
           <span
             style={{
               fontSize: "20px",
@@ -206,7 +213,7 @@ export function Weather(props) {
           </span>
         </div>
         <div>
-          <img src={wind} alt="" />
+          <img src={tempImg} alt="" />
           <span
             style={{
               fontSize: "20px",
@@ -214,7 +221,7 @@ export function Weather(props) {
               fontWeight: "bold",
             }}
           >
-            Wind Speed{" "}
+            Tempurate{" "}
           </span>
           <span
             style={{
@@ -223,32 +230,11 @@ export function Weather(props) {
               fontWeight: "bold",
             }}
           >
-            {speed}{" "}
-          </span>
-        </div>
-        <div>
-          <img src={wind} alt="" />
-          <span
-            style={{
-              fontSize: "20px",
-              fontFamily: "cursive",
-              fontWeight: "bold",
-            }}
-          >
-            Wind Speed{" "}
-          </span>
-          <span
-            style={{
-              fontSize: "20px",
-              fontFamily: "cursive",
-              fontWeight: "bold",
-            }}
-          >
-            {speed}{" "}
+            {(temp - 273).toFixed(0)}&#xb0;C{" "}
           </span>
         </div>
         <div>
-          <img src={wind} alt="" />
+          <img src={visibility1} alt="" />
           <span
             style={{
               fontSize: "20px",
@@ -256,7 +242,7 @@ export function Weather(props) {
               fontWeight: "bold",
             }}
           >
-            Wind Speed{" "}
+            Visibility{" "}
           </span>
           <span
             style={{
@@ -265,32 +251,11 @@ export function Weather(props) {
               fontWeight: "bold",
             }}
           >
-            {speed}{" "}
-          </span>
-        </div>
-        <div>
-          <img src={wind} alt="" />
-          <span
-            style={{
-              fontSize: "20px",
-              fontFamily: "cursive",
-              fontWeight: "bold",
-            }}
-          >
-            Wind Speed{" "}
-          </span>
-          <span
-            style={{
-              fontSize: "20px",
-              fontFamily: "cursive",
-              fontWeight: "bold",
-            }}
-          >
-            {speed}{" "}
+            {(visibility / 10000) * 100}%{" "}
           </span>
         </div>
         <div>
-          <img src={wind} alt="" />
+          <img src={litLng} alt="" />
           <span
             style={{
               fontSize: "20px",
@@ -298,7 +263,7 @@ export function Weather(props) {
               fontWeight: "bold",
             }}
           >
-            Wind Speed{" "}
+            lat/lg{" "}
           </span>
           <span
             style={{
@@ -307,7 +272,7 @@ export function Weather(props) {
               fontWeight: "bold",
             }}
           >
-            {speed}{" "}
+            {lit}{" "}
           </span>
         </div>
       </div>

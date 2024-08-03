@@ -6,7 +6,7 @@ body {
   width: 100%;
   min-height: 100vh;
 
-  background-color: aqua;
+  /* background-color: aqua; */
   display: flex;
 }
 .mainPage .left {
@@ -32,7 +32,6 @@ body {
 
 .leftNav {
   margin-top: 30px;
-  /*   background-color: rgba(2, 2, 2, 0.522); */
   display: flex;
   justify-content: space-between;
   padding: 5px 20px;
@@ -145,7 +144,7 @@ body {
   justify-content: space-around;
 }
 .bottomBoxOuter {
-  background-color: aqua;
+  /* background-color: aqua; */
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -157,11 +156,11 @@ body {
   width: 200px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: column;
   height: 180px;
   margin: 10px;
-  background-color: brown;
+  /*  background-color: brown; */
 }
 .bottomBoxOuter div img {
   object-fit: contain;
